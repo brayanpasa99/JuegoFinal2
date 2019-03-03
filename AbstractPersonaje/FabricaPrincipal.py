@@ -5,13 +5,13 @@ class FabricaPrincipal():
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def crearSAtacar(self):
+    def crearSElfo(self):
         pass
 
     @abc.abstractmethod
-    def crearSCaminar(self):
+    def crearSOrco(self):
         pass
 
     @abc.abstractmethod
-    def crearMorir(self):
+    def crearSGuerrero(self):
         pass
