@@ -13,3 +13,6 @@ class Personaje:
 
     def setSMorir(self, morir):
         self.__morir = morir
+
+    def getSprites(self):
+        return [self.__atacar, self.__morir, self.__caminar]

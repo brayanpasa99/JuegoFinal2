@@ -11,24 +11,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BuilderEscenario/DirectorEscenario.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="46" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BuilderEscenario/Escenario.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BuilderPersonaje/BuilderAbstract.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -51,7 +33,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BuilderPersonaje/ElfoPer1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -59,6 +41,48 @@
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BuilderPersonaje/DirectorPersonaje.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Jugador.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BuilderPersonaje/Personaje.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -94,7 +118,6 @@
         <option value="$PROJECT_DIR$/BuilderPersonaje/PElfo1.py" />
         <option value="$PROJECT_DIR$/PersonajesSprites.py" />
         <option value="$PROJECT_DIR$/AbstractPersonaje/AtacarElfo.py" />
-        <option value="$PROJECT_DIR$/BuilderPersonaje/Personaje.py" />
         <option value="$PROJECT_DIR$/BuilderPersonaje/ElfoPer1.py" />
         <option value="$PROJECT_DIR$/AbstractPersonaje/CaminarElfo.py" />
         <option value="$PROJECT_DIR$/AbstractPersonaje/MorirElfo.py" />
@@ -112,11 +135,13 @@
         <option value="$PROJECT_DIR$/BuilderPersonaje/GuerreroPer2.py" />
         <option value="$PROJECT_DIR$/BuilderPersonaje/GuerreroPer1.py" />
         <option value="$PROJECT_DIR$/BuilderPersonaje/GuerreroPer3.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/Escenario.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/DirectorEscenario.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/BuilderAbstractE.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/IzquierdaJug.py" />
+        <option value="$PROJECT_DIR$/BuilderPersonaje/Personaje.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Jugador.py" />
       </list>
     </option>
   </component>
@@ -137,21 +162,6 @@
             <path>
               <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
               <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-              <item name="AbstractEscenario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-              <item name="BuilderEscenario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-              <item name="BuilderPersonaje" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -456,24 +466,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/BuilderEscenario/DirectorEscenario.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BuilderPersonaje/Personaje.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BuilderPersonaje/DirectorPersonaje.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -481,13 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BuilderEscenario/DirectorEscenario.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -514,6 +503,40 @@
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BuilderPersonaje/DirectorPersonaje.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BuilderPersonaje/Personaje.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jugador.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="60" column="26" lean-forward="true" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
