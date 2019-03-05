@@ -1,3 +1,4 @@
+from AbstractEscenario.CastilloGuerrero import CastilloGuerrero
 from AbstractEscenario.IconosGuerrero import IconosGuerrero
 from BuilderEscenario.BuilderAbstractE import BuilderAbstractE
 
@@ -8,4 +9,4 @@ class GuerreroEscenario(BuilderAbstractE):
         return IconosGuerrero().getIconos(3)
 
     def getSCastillo(self):
-        return CastilloGuerrero()
+        return CastilloGuerrero().getSCastillo(3)
