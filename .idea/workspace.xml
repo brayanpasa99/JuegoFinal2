@@ -13,10 +13,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="1398">
+              <caret line="97" column="8" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="8" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#15#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,6 +101,23 @@
               <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
               <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
+              <item name="Imagenes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
+              <item name="Imagenes" type="462c0819:PsiDirectoryNode" />
+              <item name="Botones" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
+              <item name="Imagenes" type="462c0819:PsiDirectoryNode" />
+              <item name="Fondos" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -113,11 +130,16 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\Proyectos GIT\JuegoFinal2\BuilderPersonaje" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Fondos" />
+      <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Botones" />
+      <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Jugar" />
+      <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\FondoPrincipal" />
       <recent name="I:\Proyectos GIT\JuegoFinal2" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Fondos" />
+      <recent name="I:\Proyectos GIT\JuegoFinal2\BuilderPersonaje" />
       <recent name="I:\Proyectos GIT\JuegoFinal2" />
     </key>
   </component>
@@ -168,7 +190,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3286385" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3286385" />
@@ -187,13 +209,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BuilderPersonaje/OrcoPer3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BuilderPersonaje/GuerreroPer1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -559,12 +574,15 @@
     <entry file="file://$PROJECT_DIR$/AbstractEscenario/FabricaPrincipalE.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Imagenes/Fondos/FondoPrincipal.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="1398">
+          <caret line="97" column="8" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="8" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#15#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
