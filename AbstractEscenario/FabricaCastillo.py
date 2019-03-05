@@ -1,13 +1,16 @@
+from AbstractEscenario.CastilloElfo import CastilloElfo
+from AbstractEscenario.CastilloGuerrero import CastilloGuerrero
+from AbstractEscenario.CastilloOrco import CastilloOrco
 from AbstractEscenario.FabricaPrincipalE import FabricaPrincipalE
 
 
 class FabricaCastillo(FabricaPrincipalE):
 
     def crearIElfo(self):
-        pass
+        return CastilloElfo().getSCastillo(3)
 
     def crearIGuerrero(self):
-        pass
+        return CastilloGuerrero().getSCastillo(3)
 
     def crearIOrco(self):
-        pass
+        return CastilloOrco().getSCastillo(3)

@@ -6,7 +6,7 @@ class AtacarElfo(AbstractSAtacar):
 
     def getSAtacar(self, num_elfo, n):
         sprites = []
-        for i in range(0, 5):
+        for i in range(0, n):
             imagen = 'Imagenes/Elfos/' + num_elfo + '/Ataque/Ataque' + str(i + 1) + '.png'
             sprites.append(PersonajesSprites(imagen, (50, 50)))
 
