@@ -10,6 +10,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="66" column="16" selection-start-line="66" selection-end-line="67" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BuilderEscenario/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
@@ -77,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BuilderEscenario/OrcoEscenario.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -168,27 +180,6 @@
               <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
               <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-              <item name="AbstractEscenario" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-              <item name="BuilderPersonaje" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-              <item name="Imagenes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JuegoFinal2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JuegoFinal2" type="462c0819:PsiDirectoryNode" />
-              <item name="Imagenes" type="462c0819:PsiDirectoryNode" />
-              <item name="Fondos" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -254,6 +245,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -357,16 +349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="66" column="16" selection-start-line="66" selection-end-line="67" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,6 +638,16 @@
           <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="66" column="16" selection-start-line="66" selection-end-line="67" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
