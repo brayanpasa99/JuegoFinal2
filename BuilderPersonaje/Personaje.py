@@ -1,9 +1,13 @@
+import copy
+
+
 class Personaje:
 
     def __init__(self):
-        self.__atacar  = []
-        self.__caminar  = []
-        self.__morir    = []
+        self.atacar  = []
+        self.caminar  = []
+        self.morir    = []
+        
 
     def setSAtacar(self, atacar):
         self.__atacar = atacar
@@ -14,5 +18,18 @@ class Personaje:
     def setSMorir(self, morir):
         self.__morir = morir
 
-    def getSprites(self):
-        return [self.__atacar, self.__morir, self.__caminar]
+    def getSAtacar(self):
+        return self.__atacar
+
+    def getSMorir(self):
+        return self.__morir
+
+    def getSCaminar(self):
+        return  self.__caminar
+
+    def clone(self):
+        return copy.deepcopy(self)
+   
+    #def getSprites(self):
+        #return [self.__atacar, self.__morir, self.__caminar]
+

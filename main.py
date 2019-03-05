@@ -18,30 +18,34 @@ def main():
     if raza == 1:
 
         Jugador1.setParametros(False, 'Elfos')
-        PersonajesJ1 = Jugador1.crearJugador()
+        Jugador1.crearJugador()
+        
 
     elif raza == 2:
         Jugador1.setParametros(False, 'Orcos')
-        PersonajesJ1 = Jugador1.crearJugador()
+        Jugador1.crearJugador()
+
+        
 
     elif raza == 3:
         Jugador1.setParametros(False, 'Guerreros')
-        PersonajesJ1 = Jugador1.crearJugador()
+        Jugador1.crearJugador()
+       
 
     raza = input("Seleccione la raza del jugador 2: ")
 
     if raza == 1:
 
         Jugador2.setParametros(True, 'Elfos')
-        PersonajesJ2 = Jugador1.crearJugador()
+        Jugador2.crearJugador()
 
     elif raza == 2:
         Jugador2.setParametros(True, 'Orcos')
-        PersonajesJ2 = Jugador1.crearJugador()
+        Jugador2.crearJugador()
 
     elif raza == 3:
         Jugador2.setParametros(True, 'Guerreros')
-        PersonajesJ2 = Jugador1.crearJugador()
+        Jugador2.crearJugador()
 
     pygame.init()
 
@@ -50,18 +54,29 @@ def main():
 
     image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/Fondo4.jpg'), (1000, 500));
 
-    teclas = pygame.key.get_pressed()
+    
     reloj = pygame.time.Clock()
-
+    
+    
     while True:
 
+        teclas = pygame.key.get_pressed()
         ventana.blit(image_Fondo, (0, 0))
 
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    exit()
+                    pygame.quit()
+                    break
+                    
+                elif event.type == pygame.KEYDOWN:
+                    if event.key == K_1:
+                        Jugador1.CrearPersonaje(0)
 
-        Jugador1.dibujar(ventana, True, False, False)
+
+        
+
+        
+        Jugador1.dibujar(ventana)
         Jugador1.update()
 
         pygame.display.flip()
