@@ -7,7 +7,7 @@ class DirectorEscenario():
     def setBuilder(self, builder):
         self.__builder = builder
 
-    def getPersonaje(self):
+    def getEscenario(self):
         escenario = Escenario()
 
         iconos = self.__builder.getIconos()
