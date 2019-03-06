@@ -65,11 +65,7 @@ def main():
         Jugador1.update()
 
         pygame.display.flip()
-        reloj.tick(60)
-
-
-
-
+        #reloj.tick(60)
 
 if __name__ == "__main__":
     main()
