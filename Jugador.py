@@ -55,6 +55,7 @@ class JugadorIzq():
             director.setBuilder(self.build3)
       
         self.Ejercito.append(director.getPersonaje())
+        self.Ejercito[len(self.Ejercito)-1].setRectSprites((150,375))
         self.rectE.append(self.Ejercito[len(self.Ejercito)-1].getSprites()[0])
         
 
@@ -67,7 +68,7 @@ class JugadorIzq():
                 Char=self.Ejercito[i]
                 
                 for j in range(0,len(Char.getSprites())):
-                    Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x + Char.getVelocidad()
+                    Char.getSprites()[j].rect.x = Char.getSprites()[j].rect.x + Char.getVelocidad()
                     Char.getSprites()[j].rect.y=375
                     ventana.blit(Char.getSprites()[j].image,Char.getSprites()[j].rect)                
                     pygame.display.update(Char.getSprites()[j].rect)
