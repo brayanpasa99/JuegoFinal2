@@ -9,7 +9,73 @@ DIMENSIONES = (1000, 500)
 
 
 def main():
-    '''print "1. Elfos"
+
+    fachada = Fachada()
+    fachada.operacion()
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''print "1. Elfos"
     print "2. Orcos"
     print "3. Guerreros"
 
@@ -78,10 +144,3 @@ def main():
         Jugador1.dibujar(ventana)
         pygame.display.flip()
         # reloj.tick(20)'''
-
-    fachada = Fachada()
-    fachada.operacion()
-
-
-if __name__ == "__main__":
-    main()
