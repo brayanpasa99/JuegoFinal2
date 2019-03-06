@@ -14,6 +14,8 @@ from BuilderPersonaje.OrcoPer3 import OrcoPer3
 
 class JugadorIzq():
 
+    oldX=0
+    oldY=0 
     rectE=[]
     Ejercito=[]
     build1=None
@@ -66,13 +68,14 @@ class JugadorIzq():
 
             for i in range(0, len(self.Ejercito)):
                 Char=self.Ejercito[i]
-                
                 for j in range(0,len(Char.getSprites())):
-                    Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x + Char.getVelocidad()
-                    Char.getSprites()[j].rect.y=375
+                    oldX=Char.getSprites()[j].rect.x
+                    oldY=Char.getSprites()[j].rect.y
+                    oldX=oldX+ Char.getVelocidad()
+                    oldY=375
                     ventana.blit(Char.getSprites()[j].image,Char.getSprites()[j].rect)                
                     pygame.display.update(Char.getSprites()[j].rect)
-                    reloj.tick(60)
+                reloj.tick(60)
                 
 class JugadorDer():
 

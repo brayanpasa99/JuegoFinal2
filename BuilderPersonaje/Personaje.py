@@ -1,4 +1,3 @@
-import copy
 
 
 class Personaje:
@@ -64,7 +63,7 @@ class Personaje:
         for j in range(0,len(self.morir)):
             self.morir[j].rect.x=pos[0]
             self.morir[j].rect.y=pos[1]
-
+    
 
 
 

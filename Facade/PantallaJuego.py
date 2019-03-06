@@ -95,4 +95,4 @@ class PantallaJuego():
             Jugador2.dibujar(ventana)
 
             pygame.display.flip()
-            reloj.tick(60)
+        reloj.tick(60)
