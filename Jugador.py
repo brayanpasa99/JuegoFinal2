@@ -14,7 +14,7 @@ from BuilderPersonaje.OrcoPer3 import OrcoPer3
 
 class JugadorIzq():
 
-    
+    rectE=[]
     Ejercito=[]
     build1=None
     build2=None
@@ -55,6 +55,7 @@ class JugadorIzq():
             director.setBuilder(self.build3)
       
         self.Ejercito.append(director.getPersonaje())
+        
 
 
     def dibujar(self, ventana):
@@ -64,14 +65,16 @@ class JugadorIzq():
             for i in range(0, len(self.Ejercito)):
                 Char=self.Ejercito[i]
                 for j in range(0,len(Char.getSprites())):
-                    Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x + 5
+                    Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x + Char.getVelocidad()
                     Char.getSprites()[j].rect.y=375
+                    self.rectE[j]=Char.getSprites()[0].image.pygame.Surface.get_rect()
                     ventana.blit(Char.getSprites()[j].image,Char.getSprites()[j].rect)                
                     pygame.display.update(Char.getSprites()[j].rect)
                 reloj.tick(60)
                 
 class JugadorDer():
 
+    rectE=[]    
     Ejercito=[]
     build1=None
     build2=None
@@ -80,7 +83,7 @@ class JugadorDer():
     def __init__(self):
         raza = ''
         
-        
+    
 
     def setParametros(self, raza):
         self.raza = raza
@@ -125,8 +128,9 @@ class JugadorDer():
             for i in range(0, len(self.Ejercito)):
                 Char=self.Ejercito[i]
                 for j in range(0, len(Char.getSprites())):
-                    Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x - 5
+                    Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x - Char.getVelocidad()
                     Char.getSprites()[j].rect.y=375
+                    self.rectE[j]=Char.getSprites()[j].image.pygame.Surface.get_rect()
                     aux=pygame.transform.flip(Char.getSprites()[j].image,True,False)
                     ventana.blit(aux,Char.getSprites()[j].rect)                
                     pygame.display.update(Char.getSprites()[j].rect)
