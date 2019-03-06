@@ -20,28 +20,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Facade/PantallaPrincipal.py">
+        <entry file="file://$PROJECT_DIR$/Jugador.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="106">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Facade/ElegirRaza.py">
+        <entry file="file://$PROJECT_DIR$/Facade/PantallaPrincipal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="327">
+              <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Facade/ElegirRaza.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="83" column="71" selection-start-line="83" selection-start-column="71" selection-end-line="83" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Facade/PantallaJuego.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
-              <caret line="50" column="68" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
+              <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -102,7 +114,6 @@
         <option value="$PROJECT_DIR$/BuilderEscenario/BuilderAbstractE.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/IzquierdaJug.py" />
         <option value="$PROJECT_DIR$/BuilderPersonaje/Personaje.py" />
-        <option value="$PROJECT_DIR$/Jugador.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/GuerreroEscenario.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/ElfoEscenario.py" />
         <option value="$PROJECT_DIR$/BuilderEscenario/OrcoEscenario.py" />
@@ -111,9 +122,10 @@
         <option value="$PROJECT_DIR$/Facade/Fachada.py" />
         <option value="$PROJECT_DIR$/DibujarBotones.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Facade/PantallaJuego.py" />
+        <option value="$PROJECT_DIR$/Jugador.py" />
         <option value="$PROJECT_DIR$/Facade/PantallaPrincipal.py" />
         <option value="$PROJECT_DIR$/Facade/ElegirRaza.py" />
-        <option value="$PROJECT_DIR$/Facade/PantallaJuego.py" />
       </list>
     </option>
   </component>
@@ -256,16 +268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jugador.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -591,20 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Facade/PantallaPrincipal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Facade/ElegirRaza.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -615,10 +603,34 @@
     <entry file="file://$PROJECT_DIR$/Facade/PantallaJuego.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
-          <caret line="50" column="68" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
+          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jugador.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facade/PantallaPrincipal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Facade/ElegirRaza.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="83" column="71" selection-start-line="83" selection-start-column="71" selection-end-line="83" selection-end-column="71" />
         </state>
       </provider>
     </entry>

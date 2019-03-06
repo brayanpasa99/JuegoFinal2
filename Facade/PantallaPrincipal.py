@@ -49,7 +49,7 @@ class PantallaPrincipal():
                         boton['on_click'] = boton['rect'].colliderect(mouse[0], mouse[1], 1, 1)
                         if boton['on_click']:
                             if boton['nombre'] == 'BotonJugar':
-                                ElegirRaza().pide_raza(1, False)
+                                Jugador1 = ElegirRaza().pide_raza(1, False)
                             else:
                                 print "ERROR GRAVISIMO IMPERDONABLE"
 
