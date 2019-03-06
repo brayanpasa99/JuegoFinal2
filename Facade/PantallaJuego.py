@@ -74,7 +74,7 @@ class PantallaJuego():
 
             print len(Jugador1.Ejercito), len(Jugador2.Ejercito)
             if len(Jugador1.Ejercito)>0 and len(Jugador2.Ejercito)>0:
-                if Jugador1.rectE[len(Jugador1.Ejercito)-1].colliderect(Jugador2.rectE[len(Jugador1.Ejercito)-1]):
+                if pygame.sprite.collide_rect(Jugador1.rectE[0],Jugador2.rectE[0]):
                     Jugador1.Ejercito[len(Jugador1.Ejercito)-1].setenBatalla(True)
                     for i in range(0,len(Jugador1.Ejercito)-1):
                         Jugador1.Ejercito[i].setenEspera(True)
