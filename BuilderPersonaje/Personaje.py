@@ -29,6 +29,17 @@ class Personaje:
             return self.atacar
         else:
             return self.caminar
+    def setRectSprites(self, pos):
+        for j in range(0,len(self.atacar)):
+            self.atacar[j].rect.x=pos[0]
+            self.atacar[j].rect.y=pos[1]
+        for j in range(0,len(self.caminar)):
+            self.caminar[j].rect.x=pos[0]
+            self.caminar[j].rect.y=pos[1]
+        for j in range(0,len(self.morir)):
+            self.morir[j].rect.x=pos[0]
+            self.morir[j].rect.y=pos[1]
+
 
 
 

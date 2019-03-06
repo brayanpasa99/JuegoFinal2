@@ -3,8 +3,7 @@ import sys
 import pygame
 from pygame.locals import *
 
-from BuilderEscenario.DirectorEscenario import DirectorEscenario
-from Jugador import Jugador
+from Jugador import *
 
 DIMENSIONES = (1100, 600)
 COLOR_TEXTO = (243, 255, 0)
@@ -14,10 +13,11 @@ class PantallaJuego():
 
     def batalla(self, Raza1, Raza2):
 
-        Jugador1 = Jugador()
-        Jugador2 = Jugador()
-        Jugador1.setParametros(False, Raza1)
-        Jugador2.setParametros(True, Raza2)
+
+        Jugador1 = JugadorIzq()
+        Jugador2 = JugadorDer()
+        Jugador1.setParametros( Raza1)
+        Jugador2.setParametros( Raza2)
 
         pygame.init()
 
@@ -45,8 +45,17 @@ class PantallaJuego():
                         Jugador1.crearPersonaje(2)
                     if event.key == K_3:
                         Jugador1.crearPersonaje(3)
+                    if event.key == K_j:
+                        Jugador2.crearPersonaje(1)
+                    if event.key == K_k:
+                        Jugador2.crearPersonaje(2)
+                    if event.key == K_l:
+                        Jugador2.crearPersonaje(3)
+
 
                     # pygame.time.delay(40)
 
             Jugador1.dibujar(ventana)
+            Jugador2.dibujar(ventana)
+
             pygame.display.flip()

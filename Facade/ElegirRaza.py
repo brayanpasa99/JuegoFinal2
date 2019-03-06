@@ -6,7 +6,7 @@ from pygame.locals import *
 
 from DibujarBotones import DibujarBotones
 from Facade.PantallaJuego import PantallaJuego
-from Jugador import Jugador
+from Jugador import *
 
 DIMENSIONES = (1100, 600)
 COLOR_TEXTO = (243, 255, 0)
@@ -15,8 +15,8 @@ DICONOS = (200, 200)
 class ElegirRaza():
 
     def __init__(self):
-        self.Jugador1 = Jugador()
-        self.Jugador2 = Jugador()
+        self.Jugador1 = JugadorIzq()
+        self.Jugador2 = JugadorDer()
 
     def pide_raza(self, num_jugador, segundo):
 
