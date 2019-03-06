@@ -4,6 +4,7 @@ import pygame
 from pygame.locals import *
 
 from Jugador import *
+from Paisaje import Paisaje
 
 DIMENSIONES = (1100, 600)
 COLOR_TEXTO = (243, 255, 0)
@@ -16,8 +17,16 @@ class PantallaJuego():
 
         Jugador1 = JugadorIzq()
         Jugador2 = JugadorDer()
-        Jugador1.setParametros( Raza1)
-        Jugador2.setParametros( Raza2)
+        Jugador1.setParametros(Raza1)
+        Jugador2.setParametros(Raza2)
+
+        PaisajeJug1 = Paisaje()
+        PaisajeJug1.setParametros(False, Raza1, 0)
+        PaisajeJug1.crearPaisaje()
+
+        PaisajeJug2 = Paisaje()
+        PaisajeJug2.setParametros(True, Raza2, 0)
+        PaisajeJug2.crearPaisaje()
 
         pygame.init()
 
@@ -55,7 +64,9 @@ class PantallaJuego():
 
                     # pygame.time.delay(40)
 
+            PaisajeJug1.dibujar(ventana)
             Jugador1.dibujar(ventana)
+            PaisajeJug2.dibujar(ventana)
             Jugador2.dibujar(ventana)
 
             pygame.display.flip()
