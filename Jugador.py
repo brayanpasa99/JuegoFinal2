@@ -21,12 +21,7 @@ class JugadorIzq():
     build3=None
 
     def __init__(self):
-<<<<<<< HEAD
         raza = ''
-=======
-        self.segundo = False
-        self.raza = ''
->>>>>>> d722cf26e248662a2d0f111c7690e9b4557e8861
         
         
 

@@ -1,9 +1,5 @@
 from Facade.Fachada import Fachada
 
-<<<<<<< HEAD
-from Jugador import *
-=======
->>>>>>> d722cf26e248662a2d0f111c7690e9b4557e8861
 
 def main():
 
