@@ -55,20 +55,17 @@ class JugadorIzq():
             director.setBuilder(self.build3)
       
         self.Ejercito.append(director.getPersonaje())
-        
-
 
     def dibujar(self, ventana):
         reloj = pygame.time.Clock()
         if len(self.Ejercito)>0:
-
             for i in range(0, len(self.Ejercito)):
                 Char=self.Ejercito[i]
                 for j in range(0,len(Char.getSprites())):
                     Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x + Char.getVelocidad()
                     Char.getSprites()[j].rect.y=375
-                    self.rectE[j]=Char.getSprites()[0].image.pygame.Surface.get_rect()
-                    ventana.blit(Char.getSprites()[j].image,Char.getSprites()[j].rect)                
+                    self.rectE.append(Char.getSprites()[j].rect)
+                    ventana.blit(Char.getSprites()[j].image, Char.getSprites()[j].rect)
                     pygame.display.update(Char.getSprites()[j].rect)
                 reloj.tick(60)
                 
@@ -124,13 +121,12 @@ class JugadorDer():
     def dibujar(self, ventana):
         reloj = pygame.time.Clock()
         if len(self.Ejercito)>0:
-            
             for i in range(0, len(self.Ejercito)):
                 Char=self.Ejercito[i]
                 for j in range(0, len(Char.getSprites())):
                     Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x - Char.getVelocidad()
                     Char.getSprites()[j].rect.y=375
-                    self.rectE[j]=Char.getSprites()[j].image.pygame.Surface.get_rect()
+                    self.rectE.append(Char.getSprites()[j].rect)
                     aux=pygame.transform.flip(Char.getSprites()[j].image,True,False)
                     ventana.blit(aux,Char.getSprites()[j].rect)                
                     pygame.display.update(Char.getSprites()[j].rect)
