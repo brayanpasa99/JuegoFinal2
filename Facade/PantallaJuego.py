@@ -20,6 +20,7 @@ class PantallaJuego():
         self.Jugador2 = Jug2
 
     def batalla(self):
+
         pygame.init()
 
         ventana = pygame.display.set_mode(DIMENSIONES)

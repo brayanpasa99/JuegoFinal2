@@ -82,6 +82,7 @@ class ElegirRaza():
                                     self.pide_raza(2, True)
                                 else:
                                     Jugador2.setParametros(True, 'Elfos')
+
                             elif boton['nombre'] == 'SelOrcos':
                                 if not segundo:
                                     Jugador1.setParametros(False, 'Orcos')
@@ -94,6 +95,7 @@ class ElegirRaza():
                                     self.pide_raza(2, True)
                                 else:
                                     Jugador2.setParametros(True, 'Guerreros')
+
                             else:
                                 print "ERROR GRAVÍSIMO IMPERDONABLE"
 
