@@ -9,6 +9,7 @@ from Facade.ElegirRaza import ElegirRaza
 from Facade.PantallaJuego import PantallaJuego
 
 DIMENSIONES = (1100, 600)
+COLOR_TEXTO = (243, 255, 0)
 
 class PantallaPrincipal():
 
@@ -20,7 +21,8 @@ class PantallaPrincipal():
 
         image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/FondoPrincipal.png'), DIMENSIONES)
 
-        Fuente = pygame.font.SysFont("Arial", 30)
+        FuenteTitulo = pygame.font.SysFont("Arial", 60)
+        LabelTitulo = FuenteTitulo.render("Juanito y Los Argonautas", 0, COLOR_TEXTO)
 
         #Botón de jugar
         boton_jugar = pygame.transform.scale(pygame.image.load('Imagenes/Botones/Jugar.png'), (300, 100))
@@ -38,6 +40,7 @@ class PantallaPrincipal():
         while True:
 
             ventana.blit(image_Fondo, (0, 0))
+            ventana.blit(LabelTitulo, (300, 50))
 
             DibujarBotones().dibujar_botones(botones, ventana)
 
