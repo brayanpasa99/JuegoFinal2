@@ -1,4 +1,6 @@
 # coding=utf-8
+import sys
+
 import pygame
 from pygame.locals import *
 
@@ -74,7 +76,7 @@ def main():
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
-                    break
+                    sys.exit()
 
                 if event.type == MOUSEBUTTONDOWN:
                     mouse = event.pos
@@ -144,6 +146,7 @@ def pide_raza():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                sys.exit()
 
             if event.type == MOUSEBUTTONDOWN:
                 mouse = event.pos
