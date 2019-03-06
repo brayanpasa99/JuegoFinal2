@@ -15,9 +15,9 @@ from BuilderPersonaje.OrcoPer3 import OrcoPer3
 class Jugador():
 
     def __init__(self):
-        __segundo = False
-        __raza = ''
-        __luchadores = []
+        self.__segundo = False
+        self.__raza = ''
+        self.__luchadores = []
 
     def setParametros(self, segundo, raza):
         self.__segundo = segundo
