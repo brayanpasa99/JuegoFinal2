@@ -22,6 +22,6 @@ El patron facade provee una interfaz unificada para un conjunto de interfaces en
 
 ## Estructura:
 
-![Estructura](https://github.com/brayanpasa99/Patrones/blob/master/Patrones%20estructurales/Facade/Im%C3%A1genes/Estructura.png)
+![Estructura](https://github.com/brayanpasa99/JuegoFinal2/blob/master/Diagrama%20juego.png)
 
 
