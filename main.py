@@ -2,13 +2,14 @@ import sys
 import pygame
 from pygame.locals import *
 
+from Facade.Fachada import Fachada
 from Jugador import Jugador
 
 DIMENSIONES = (1000, 500)
 
 
 def main():
-    print "1. Elfos"
+    '''print "1. Elfos"
     print "2. Orcos"
     print "3. Guerreros"
 
@@ -76,7 +77,11 @@ def main():
 
         Jugador1.dibujar(ventana)
         pygame.display.flip()
-        # reloj.tick(20)
+        # reloj.tick(20)'''
+
+    fachada = Fachada()
+    fachada.operacion()
+
 
 if __name__ == "__main__":
     main()
