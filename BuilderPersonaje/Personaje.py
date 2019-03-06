@@ -3,33 +3,36 @@ import copy
 
 class Personaje:
 
+    Poder= 50
+    Vida= 150
+    enBatalla=False
+
     def __init__(self):
         self.atacar  = []
         self.caminar  = []
         self.morir    = []
-        
+    
+    def setenBatalla(self,estado):
+        self.enBatalla = estado
 
     def setSAtacar(self, atacar):
-        self.__atacar = atacar
+        self.atacar = atacar
 
     def setSCaminar(self, caminar):
-        self.__caminar = caminar
+        self.caminar = caminar
 
     def setSMorir(self, morir):
-        self.__morir = morir
+        self.morir = morir
 
-    def getSAtacar(self):
-        return self.__atacar
+    def getSprites(self):
+        if self.enBatalla:
+            return self.atacar
+        else:
+            return self.caminar
 
-    def getSMorir(self):
-        return self.__morir
 
-    def getSCaminar(self):
-        return  self.__caminar
 
-    def clone(self):
-        return copy.deepcopy(self)
-   
-    #def getSprites(self):
-        #return [self.__atacar, self.__morir, self.__caminar]
+
+
+    
 

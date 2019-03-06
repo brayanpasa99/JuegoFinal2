@@ -50,9 +50,8 @@ def main():
     ventana = pygame.display.set_mode(DIMENSIONES)
     pygame.display.set_caption("Campo de Batalla")
 
-    image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/Fondo4.jpg'), (1000, 500));
+    image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/Fondo4.jpg'), (1000, 500))
 
-    
     reloj = pygame.time.Clock()
     
     
@@ -73,9 +72,9 @@ def main():
                 if event.key == K_3:
                     Jugador1.crearPersonaje(3)
 
-        Jugador1.dibujar(ventana)
-        Jugador1.update()
+                # pygame.time.delay(40)
 
+        Jugador1.dibujar(ventana)
         pygame.display.flip()
         # reloj.tick(20)
 
