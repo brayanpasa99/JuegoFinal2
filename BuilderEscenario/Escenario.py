@@ -9,3 +9,6 @@ class Escenario():
 
     def setSCastillo(self, castillo):
         self.castillo = castillo
+
+    def getSprites(self):
+        return [self.castillo, self.iconos]

@@ -1,29 +1,41 @@
+import random
 import sys
 
 import pygame
 from pygame.locals import *
 
 from Jugador import *
+from Paisaje import Paisaje
 
 DIMENSIONES = (1100, 600)
 COLOR_TEXTO = (243, 255, 0)
 DICONOS = (200, 200)
+FONDOS = ['Fondo1.png', 'Fondo2.png', 'Fondo3.jpg', 'Fondo4.jpg', 'Fondo5.png']
 
 class PantallaJuego():
 
     def batalla(self, Raza1, Raza2):
 
+
         Jugador1 = JugadorIzq()
         Jugador2 = JugadorDer()
-        Jugador1.setParametros( Raza1)
-        Jugador2.setParametros( Raza2)
-        
+        Jugador1.setParametros(Raza1)
+        Jugador2.setParametros(Raza2)
+
+        PaisajeJug1 = Paisaje()
+        PaisajeJug1.setParametros(False, Raza1, 0)
+        PaisajeJug1.crearPaisaje()
+
+        PaisajeJug2 = Paisaje()
+        PaisajeJug2.setParametros(True, Raza2, 0)
+        PaisajeJug2.crearPaisaje()
+
         pygame.init()
 
         ventana = pygame.display.set_mode(DIMENSIONES)
         pygame.display.set_caption("Campo de Batalla")
 
-        image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/Fondo4.jpg'), DIMENSIONES)
+        image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/'+FONDOS[random.randrange(5)]), DIMENSIONES)
 
         reloj = pygame.time.Clock()
 
@@ -71,7 +83,10 @@ class PantallaJuego():
                         Jugador2.Ejercito[i].setenEspera(False)
 
 
+            PaisajeJug1.dibujar(ventana)
             Jugador1.dibujar(ventana)
+            PaisajeJug2.dibujar(ventana)
             Jugador2.dibujar(ventana)
 
             pygame.display.flip()
+            reloj.tick(60)

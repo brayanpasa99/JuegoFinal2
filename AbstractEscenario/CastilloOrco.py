@@ -8,6 +8,6 @@ class CastilloOrco(AbstractCastillo):
         sprites = []
         for i in range(0, n):
             imagen = 'Imagenes/Castillos/CastilloVerde' + str(i + 1) + '.png'
-            sprites.append(PersonajesSprites(imagen, (300, 700)))
+            sprites.append(PersonajesSprites(imagen, (300, 400)))
 
         return sprites
