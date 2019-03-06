@@ -1,6 +1,7 @@
 import sys
 
 import pygame
+from pygame.locals import *
 
 DIMENSIONES = (1100, 600)
 COLOR_TEXTO = (243, 255, 0)
