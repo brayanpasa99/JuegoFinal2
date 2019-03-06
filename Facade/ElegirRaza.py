@@ -5,6 +5,7 @@ import pygame
 from pygame.locals import *
 
 from DibujarBotones import DibujarBotones
+from Facade.PantallaJuego import PantallaJuego
 from Jugador import Jugador
 
 DIMENSIONES = (1100, 600)
@@ -78,9 +79,15 @@ class ElegirRaza():
                             if boton['nombre'] == 'SelElfos':
                                 if not segundo:
                                     Jugador1.setParametros(False, 'Elfos')
-                                    self.pide_raza(2, True)
+                                    self.pide_raza(num_jugador+1, True)
+                                elif segundo and num_jugador == 2:
+                                    Jugador2.setParametros(True, 'Elfos');
+                                    num_jugador += 1
+                                    print num_jugador
                                 else:
-                                    Jugador2.setParametros(True, 'Elfos')
+                                    "Aquí"
+                                    PantallaJuego().setJugadores(Jugador1, Jugador2)
+                                    PantallaJuego().batalla()
                             elif boton['nombre'] == 'SelOrcos':
                                 if not segundo:
                                     Jugador1.setParametros(False, 'Orcos')
