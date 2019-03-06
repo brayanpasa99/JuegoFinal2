@@ -1,3 +1,5 @@
+import sys
+
 import pygame
 from pygame.locals import *
 
@@ -66,8 +68,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                pygame.display.update()
-                break
+                sys.exit()
 
             elif event.type == pygame.KEYDOWN:
                 if event.key == K_1:
@@ -82,6 +83,9 @@ def main():
         pygame.display.update()
         pygame.display.flip()
         reloj.tick(60)
+
+    pygame.quit()
+    sys.exit()
 
 if __name__ == "__main__":
     main()
