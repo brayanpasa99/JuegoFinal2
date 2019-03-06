@@ -62,31 +62,17 @@ def main():
         ventana.blit(image_Fondo, (0, 0))
 
         for event in pygame.event.get():
-<<<<<<< HEAD
-                if event.type == pygame.QUIT:
-                    sys.exit()
-
-                elif event.type == pygame.KEYDOWN:
-                    if event.key == K_1:
-                        Jugador1.crearPersonaje(1)
-                    if event.key == K_2:
-                        Jugador1.crearPersonaje(2)
-                    if event.key == K_3:
-                        Jugador1.crearPersonaje(3)
-        
-=======
             if event.type == pygame.QUIT:
-                pygame.quit()
-                break
+                sys.exit()
 
             elif event.type == pygame.KEYDOWN:
                 if event.key == K_1:
-                        Jugador1.CrearPersonaje(0)
+                    Jugador1.crearPersonaje(1)
+                if event.key == K_2:
+                    Jugador1.crearPersonaje(2)
+                if event.key == K_3:
+                    Jugador1.crearPersonaje(3)
 
-            else:
-                break
-
->>>>>>> 1a391307cd9066263943eba78c8dbe74f96c5b4c
         Jugador1.dibujar(ventana)
         Jugador1.update()
 
