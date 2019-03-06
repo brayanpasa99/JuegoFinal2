@@ -13,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+            <state relative-caret-position="225">
+              <caret line="176" column="67" selection-start-line="176" selection-start-column="67" selection-end-line="176" selection-end-column="67" />
               <folding>
                 <element signature="e#15#25#0" expanded="true" />
               </folding>
@@ -25,10 +25,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Jugador.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="55">
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -228,16 +228,16 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Fondos" />
-      <recent name="I:\Proyectos GIT\JuegoFinal2\BuilderPersonaje" />
-      <recent name="I:\Proyectos GIT\JuegoFinal2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Fondos" />
       <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Botones" />
       <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Jugar" />
       <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\FondoPrincipal" />
+      <recent name="I:\Proyectos GIT\JuegoFinal2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\Proyectos GIT\JuegoFinal2\Imagenes\Fondos" />
+      <recent name="I:\Proyectos GIT\JuegoFinal2\BuilderPersonaje" />
       <recent name="I:\Proyectos GIT\JuegoFinal2" />
     </key>
   </component>
@@ -381,10 +381,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jugador.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="55">
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -677,8 +677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        <state relative-caret-position="225">
+          <caret line="176" column="67" selection-start-line="176" selection-start-column="67" selection-end-line="176" selection-end-column="67" />
           <folding>
             <element signature="e#15#25#0" expanded="true" />
           </folding>

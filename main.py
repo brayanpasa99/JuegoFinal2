@@ -8,6 +8,7 @@ from Jugador import Jugador
 
 DIMENSIONES = (1100, 600)
 COLOR_TEXTO = (243, 255, 0)
+DICONOS = (200, 200)
 
 
 def main():
@@ -17,8 +18,7 @@ def main():
 
     raza = input("Seleccione la raza del jugador 1: ")
 
-    Jugador1 = Jugador()
-    Jugador2 = Jugador()
+
     if raza == 1:
 
         Jugador1.setParametros(False, 'Elfos')
@@ -85,7 +85,8 @@ def main():
                         if boton['on_click']:
                             if boton['nombre'] == 'BotonJugar':
                                 print "I'm here"
-                                pide_raza()
+                                pide_raza(1, False)
+                                pide_raza(2, True)
                             else:
                                 print "ERROR GRAVISIMO IMPERDONABLE"
 
@@ -100,30 +101,35 @@ def main():
         pygame.display.update()
         #reloj.tick(60)
 
-def pide_raza():
+def pide_raza(num_jugador, segundo):
 
     pygame.init()
 
-    ventana_raza1 = pygame.display.set_mode(DIMENSIONES)
-    pygame.display.set_caption("Escoger la raza jugador 1")
+    Jugador1 = Jugador()
+    Jugador2 = Jugador()
+
+    ventana_raza = pygame.display.set_mode(DIMENSIONES)
+    pygame.display.set_caption("Escoger raza de jugadores")
 
     Fuente = pygame.font.SysFont("Arial", 30)
+    FuenteTitulo = pygame.font.SysFont("Arial", 50)
 
     LabelElfo = Fuente.render("Elfos", 0, COLOR_TEXTO)
     LabelOrco = Fuente.render("Orcos", 0, COLOR_TEXTO)
     LabelGuerrero = Fuente.render("Guerreros", 0, COLOR_TEXTO)
+    LabelSelRaza = FuenteTitulo.render("Seleccione la raza del jugador "+str(num_jugador), 0, COLOR_TEXTO)
 
-    boton_sel_elfos = pygame.transform.scale(pygame.image.load("Imagenes/Iconos/Elfo/Elfo1.png"), (100, 100))
+    boton_sel_elfos = pygame.transform.scale(pygame.image.load("Imagenes/Iconos/Elfo/Elfo1.png"), DICONOS)
     rect_boton_sel_elfos = boton_sel_elfos.get_rect()
-    rect_boton_sel_elfos.topleft = (100, 100)
+    rect_boton_sel_elfos.topleft = (200, 300)
 
-    boton_sel_orcos = pygame.transform.scale(pygame.image.load("Imagenes/Iconos/Orco/Orco1.png"), (100, 100))
+    boton_sel_orcos = pygame.transform.scale(pygame.image.load("Imagenes/Iconos/Orco/Orco1.png"), DICONOS)
     rect_boton_sel_orcos = boton_sel_orcos.get_rect()
-    rect_boton_sel_orcos.topleft = (100, 200)
+    rect_boton_sel_orcos.topleft = (500, 300)
 
-    boton_sel_guerreros = pygame.transform.scale(pygame.image.load("Imagenes/Iconos/Guerrero/Guerrero1.png"), (100, 100))
+    boton_sel_guerreros = pygame.transform.scale(pygame.image.load("Imagenes/Iconos/Guerrero/Guerrero1.png"), DICONOS)
     rect_boton_sel_guerreros = boton_sel_guerreros.get_rect()
-    rect_boton_sel_guerreros.topleft = (100, 300)
+    rect_boton_sel_guerreros.topleft = (800, 300)
 
     # Listado de botones en un diccionario
     botones = []
@@ -132,16 +138,20 @@ def pide_raza():
     botones.append({'nombre': "SelOrcos", 'imagen': boton_sel_orcos, 'rect': rect_boton_sel_orcos, 'on_click': False})
     botones.append({'nombre': "SelGuerreros", 'imagen': boton_sel_guerreros, 'rect': rect_boton_sel_guerreros, 'on_click': False})
 
-    imagen_fondo = pygame.transform.scale(pygame.image.load("Imagenes/Fondos/FondoRaza.png"), DIMENSIONES)
+    if not segundo:
+        imagen_fondo = pygame.transform.scale(pygame.image.load("Imagenes/Fondos/FondoRaza.png"), DIMENSIONES)
+    else:
+        imagen_fondo = pygame.transform.scale(pygame.image.load("Imagenes/Fondos/FondoRaza2.png"), DIMENSIONES)
 
     while True:
 
-        ventana_raza1.blit(imagen_fondo, (0, 0))
-        ventana_raza1.blit(LabelElfo, (100, 90))
-        ventana_raza1.blit(LabelGuerrero, (100, 190))
-        ventana_raza1.blit(LabelOrco, (100, 290))
+        ventana_raza.blit(imagen_fondo, (0, 0))
+        ventana_raza.blit(LabelElfo, (250, 250))
+        ventana_raza.blit(LabelGuerrero, (550, 250))
+        ventana_raza.blit(LabelOrco, (850, 250))
+        ventana_raza.blit(LabelSelRaza, (300, 100))
 
-        dibujar_botones(botones, ventana_raza1)
+        dibujar_botones(botones, ventana_raza)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -154,11 +164,23 @@ def pide_raza():
                     boton['on_click'] = boton['rect'].colliderect(mouse[0], mouse[1], 1, 1)
                     if boton['on_click']:
                         if boton['nombre'] == 'SelElfos':
-                            print "Seleccionó Elfos"
+                            if not segundo:
+                                Jugador1.setParametros(False, 'Elfos')
+                                pide_raza(2, True)
+                            else:
+                                Jugador2.setParametros(True, 'Elfos')
                         elif boton['nombre'] == 'SelOrcos':
-                            print "Selecionó Orcos"
+                            if not segundo:
+                                Jugador1.setParametros(False, 'Orcos')
+                                pide_raza(2, True)
+                            else:
+                                Jugador2.setParametros(True, 'Orcos')
                         elif boton['nombre'] == 'SelGuerreros':
-                            print "Selecionó Guerreros"
+                            if not segundo:
+                                Jugador1.setParametros(False, 'Guerreros')
+                                pide_raza(2, True)
+                            else:
+                                Jugador2.setParametros(True, 'Guerreros')
                         else:
                             print "ERROR GRAVÍSIMO IMPERDONABLE"
 
@@ -166,6 +188,7 @@ def pide_raza():
             for boton in botones:
                 boton['on_click'] = False
 
+        pygame.display.flip()
 
 
 def dibujar_botones(lista_botones, ventana):
