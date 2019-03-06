@@ -11,19 +11,18 @@ DICONOS = (200, 200)
 
 class PantallaJuego():
 
-    def __init__(self, Jug1, Jug2):
-        self.Jugador1 = Jug1
-        self.Jugador2 = Jug2
+    def batalla(self, Raza1, Raza2):
 
-    def batalla(self):
-
+        Jugador1 = Jugador()
+        Jugador2 = Jugador()
+        Jugador1.setParametros(False, Raza1)
+        Jugador2.setParametros(True, Raza2)
         pygame.init()
 
         ventana = pygame.display.set_mode(DIMENSIONES)
         pygame.display.set_caption("Campo de Batalla")
 
-        image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/Fondo4.jpg'), (1000, 500));
-
+        image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/Fondo4.jpg'), DIMENSIONES)
 
         reloj = pygame.time.Clock()
 
@@ -39,14 +38,13 @@ class PantallaJuego():
 
                 elif event.type == pygame.KEYDOWN:
                     if event.key == K_1:
-                        self.Jugador1.crearPersonaje(1)
+                        Jugador1.crearPersonaje(1)
                     if event.key == K_2:
-                        self.Jugador1.crearPersonaje(2)
+                        Jugador1.crearPersonaje(2)
                     if event.key == K_3:
-                        self.Jugador1.crearPersonaje(3)
+                        Jugador1.crearPersonaje(3)
 
-            self.Jugador1.dibujar(ventana, True, False, False)
-            self.Jugador1.update()
+                    # pygame.time.delay(40)
 
-        pygame.display.update()
-        #reloj.tick(27)
+            Jugador1.dibujar(ventana)
+            pygame.display.flip()

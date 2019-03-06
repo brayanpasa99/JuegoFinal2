@@ -51,16 +51,7 @@ class PantallaPrincipal():
                         if boton['on_click']:
                             if boton['nombre'] == 'BotonJugar':
                                 Jugadores = []
-                                print "Raza1"
-                                ElegirRaza().pide_raza(1, False)
-                                Jugadores.append(ElegirRaza().getJugadores())
-                                print "Raza2"
-                                ElegirRaza().pide_raza(2, True)
-                                Jugadores.append(ElegirRaza().getJugadores())
-                                print "Raza3"
-                                print Jugadores[0].raza
-                                pan = PantallaJuego(Jugadores[0], Jugadores[1])
-                                pan.batalla()
+                                PantallaJuego().batalla(ElegirRaza().pide_raza(1, False), ElegirRaza().pide_raza(2, True))
 
                             else:
                                 print "ERROR GRAVISIMO IMPERDONABLE"

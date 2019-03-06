@@ -14,77 +14,58 @@ from BuilderPersonaje.OrcoPer3 import OrcoPer3
 
 class Jugador():
 
+    Ejercito=[]
+    build1=None
+    build2=None
+    build3=None
+
     def __init__(self):
-        self.__segundo = False
-        self.__raza = ''
-        self.__luchadores = []
+        self.segundo = False
+        self.raza = ''
+
+
 
     def setParametros(self, segundo, raza):
-        self.__segundo = segundo
-        self.__raza = raza
+        self.segundo = segundo
+        self.raza = raza
+        if self.raza == 'Elfos':
+            self.build1 = ElfoPer1()
+            self.build2 = ElfoPer2()
+            self.build3 = ElfoPer3()
+        elif self.raza == 'Orcos':
+            self.build1 = OrcoPer1()
+            self.build2 = OrcoPer2()
+            self.build3 = OrcoPer3()
+        elif self.raza == 'Guerreros':
+            self.build1 = GuerreroPer1()
+            self.build2 = GuerreroPer2()
+            self.build3 = GuerreroPer3()
 
-    def crearJugador(self):
+    def crearPersonaje(self,id):
 
         director = DirectorPersonaje()
-        luchadores = []
 
-        if self.__raza == 'Elfos':
-            Elfo1 = ElfoPer1()
-            Elfo2 = ElfoPer2()
-            Elfo3 = ElfoPer3()
+        if id == 1:
+            director.setBuilder(self.build1)
 
-            director.setBuilder(Elfo1)
-            luchadores.append(director.getPersonaje().getSprites())
+        elif id == 2:
+            director.setBuilder(self.build2)
 
-            director.setBuilder(Elfo2)
-            luchadores.append(director.getPersonaje().getSprites())
+        elif id == 3:
+            director.setBuilder(self.build3)
 
-            director.setBuilder(Elfo3)
-            luchadores.append(director.getPersonaje().getSprites())
+        self.Ejercito.append(director.getPersonaje())
 
-            self.__luchadores = luchadores
 
-        if self.__raza == 'Orcos':
-            Orco1 = OrcoPer1()
-            Orco2 = OrcoPer2()
-            Orco3 = OrcoPer3()
-
-            director.setBuilder(Orco1)
-            luchadores.append(director.getPersonaje().getSprites())
-
-            director.setBuilder(Orco2)
-            luchadores.append(director.getPersonaje().getSprites())
-
-            director.setBuilder(Orco3)
-            luchadores.append(director.getPersonaje().getSprites())
-
-            self.__luchadores = luchadores
-
-        if self.__raza == 'Guerreros':
-            Guerrero1 = GuerreroPer1()
-            Guerrero2 = GuerreroPer2()
-            Guerrero3 = GuerreroPer3()
-
-            director.setBuilder(Guerrero1)
-            luchadores.append(director.getPersonaje().getSprites())
-
-            director.setBuilder(Guerrero2)
-            luchadores.append(director.getPersonaje().getSprites())
-
-            director.setBuilder(Guerrero3)
-            luchadores.append(director.getPersonaje().getSprites())
-
-            self.__luchadores = luchadores
-
-    def dibujar(self, ventana, atacando, caminando, muriendo):
-        if atacando == True:
-            for i in range(0, len(self.__luchadores[0][1])):
-                self.__luchadores[0][1][i].rect.left = self.__luchadores[0][1][i].rect.left + 20
-                self.__luchadores[0][1][i].rect.top = self.__luchadores[0][1][i].rect.top + 20
-                ventana.blit(self.__luchadores[0][1][i].image, self.__luchadores[0][1][i].rect)
-                pygame.display.flip()
-                reloj = pygame.time.Clock()
+    def dibujar(self, ventana):
+        reloj = pygame.time.Clock()
+        for i in range(0, len(self.Ejercito)):
+            Char=self.Ejercito[i]
+            for j in range(0,len(Char.getSprites())):
+                Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x + 5
+                Char.getSprites()[j].rect.y=375
+                ventana.blit(Char.getSprites()[j].image,Char.getSprites()[j].rect)
+                pygame.display.update(Char.getSprites()[j].rect)
                 reloj.tick(60)
 
-    def update(self):
-        pass
+
