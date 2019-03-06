@@ -15,72 +15,48 @@ from BuilderPersonaje.OrcoPer3 import OrcoPer3
 class Jugador():
 
     Ejercito=[]
+    build1=None
+    build2=None
+    build3=None
 
     def __init__(self):
         segundo = False
         raza = ''
-        luchadores = []
+        
         
 
     def setParametros(self, segundo, raza):
         self.segundo = segundo
         self.raza = raza
+        if self.raza == 'Elfos':
+            self.build1 = ElfoPer1()
+            self.build2 = ElfoPer2()
+            self.build3 = ElfoPer3()
+        elif self.raza == 'Orcos':
+            self.build1 = OrcoPer1()
+            self.build2 = OrcoPer2()
+            self.build3 = OrcoPer3()
+        elif self.raza == 'Guerreros':
+            self.build1 = GuerreroPer1()
+            self.build2 = GuerreroPer2()
+            self.build3 = GuerreroPer3()
 
-    def crearJugador(self):
+    def crearPersonaje(self,id):
 
         director = DirectorPersonaje()
-        luchadores = []
+        
+        
+        if id == 1:
+            director.setBuilder(self.build1)
+            
+        elif id == 2:
+            director.setBuilder(self.build2)
+            
+        elif id == 3:
+            director.setBuilder(self.build3)
+            
 
-        if self.raza == 'Elfos':
-            Elfo1 = ElfoPer1()
-            Elfo2 = ElfoPer2()
-            Elfo3 = ElfoPer3()
-
-            director.setBuilder(Elfo1)
-            luchadores.append(director.getPersonaje())
-
-            director.setBuilder(Elfo2)
-            luchadores.append(director.getPersonaje())
-
-            director.setBuilder(Elfo3)
-            luchadores.append(director.getPersonaje())
-
-            self.luchadores = luchadores
-
-        if self.raza == 'Orcos':
-            Orco1 = OrcoPer1()
-            Orco2 = OrcoPer2()
-            Orco3 = OrcoPer3()
-
-            director.setBuilder(Orco1)
-            luchadores.append(director.getPersonaje())
-
-            director.setBuilder(Orco2)
-            luchadores.append(director.getPersonaje())
-
-            director.setBuilder(Orco3)
-            luchadores.append(director.getPersonaje())
-
-            self.luchadores = luchadores
-
-        if self.raza == 'Guerreros':
-            Guerrero1 = GuerreroPer1()
-            Guerrero2 = GuerreroPer2()
-            Guerrero3 = GuerreroPer3()
-
-            director.setBuilder(Guerrero1)
-            luchadores.append(director.getPersonaje())
-
-            director.setBuilder(Guerrero2)
-            luchadores.append(director.getPersonaje())
-
-            director.setBuilder(Guerrero3)
-            luchadores.append(director.getPersonaje())
-
-            self.luchadores = luchadores
-
-    def CrearPersonaje(self,id):
-        self.Ejercito.append(self.luchadores[id].clone())
+        self.Ejercito.append(director.getPersonaje())
         print("se crea un personaje ")
         print(len(self.Ejercito))
 
@@ -92,9 +68,13 @@ class Jugador():
                 Char.getSCaminar()[j].rect.x=Char.getSCaminar()[j].rect.x + 5
                 Char.getSCaminar()[j].rect.y=Char.getSCaminar()[j].rect.y
                 ventana.blit(Char.getSCaminar()[j].image,Char.getSCaminar()[j].rect)
-                pygame.display.flip()
+                pygame.display.update(Char.getSCaminar()[j].rect)
                 reloj = pygame.time.Clock()
                 reloj.tick(20)
+            
+
+
+        
 
              
         """ if True:

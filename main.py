@@ -1,3 +1,4 @@
+import sys
 import pygame
 from pygame.locals import *
 
@@ -18,18 +19,15 @@ def main():
     if raza == 1:
 
         Jugador1.setParametros(False, 'Elfos')
-        Jugador1.crearJugador()
         
 
     elif raza == 2:
         Jugador1.setParametros(False, 'Orcos')
-        Jugador1.crearJugador()
 
         
 
     elif raza == 3:
         Jugador1.setParametros(False, 'Guerreros')
-        Jugador1.crearJugador()
        
 
     raza = input("Seleccione la raza del jugador 2: ")
@@ -37,15 +35,15 @@ def main():
     if raza == 1:
 
         Jugador2.setParametros(True, 'Elfos')
-        Jugador2.crearJugador()
+        
 
     elif raza == 2:
         Jugador2.setParametros(True, 'Orcos')
-        Jugador2.crearJugador()
+        
 
     elif raza == 3:
         Jugador2.setParametros(True, 'Guerreros')
-        Jugador2.crearJugador()
+        
 
     pygame.init()
 
@@ -65,22 +63,21 @@ def main():
 
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    pygame.quit()
-                    break
-                    
+                    sys.exit()
+
                 elif event.type == pygame.KEYDOWN:
                     if event.key == K_1:
-                        Jugador1.CrearPersonaje(0)
-
-
-        
-
+                        Jugador1.crearPersonaje(1)
+                    if event.key == K_2:
+                        Jugador1.crearPersonaje(2)
+                    if event.key == K_3:
+                        Jugador1.crearPersonaje(3)
         
         Jugador1.dibujar(ventana)
         Jugador1.update()
 
         pygame.display.flip()
-        #reloj.tick(60)
+        # reloj.tick(20)
 
 if __name__ == "__main__":
     main()
