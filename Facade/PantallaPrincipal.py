@@ -6,6 +6,7 @@ from pygame.locals import *
 
 from DibujarBotones import DibujarBotones
 from Facade.ElegirRaza import ElegirRaza
+from Facade.PantallaJuego import PantallaJuego
 
 DIMENSIONES = (1100, 600)
 
@@ -49,8 +50,18 @@ class PantallaPrincipal():
                         boton['on_click'] = boton['rect'].colliderect(mouse[0], mouse[1], 1, 1)
                         if boton['on_click']:
                             if boton['nombre'] == 'BotonJugar':
+                                Jugadores = []
+                                print "Raza1"
                                 ElegirRaza().pide_raza(1, False)
+                                Jugadores.append(ElegirRaza().getJugadores())
+                                print "Raza2"
                                 ElegirRaza().pide_raza(2, True)
+                                Jugadores.append(ElegirRaza().getJugadores())
+                                print "Raza3"
+                                print Jugadores[0].raza
+                                pan = PantallaJuego(Jugadores[0], Jugadores[1])
+                                pan.batalla()
+
                             else:
                                 print "ERROR GRAVISIMO IMPERDONABLE"
 

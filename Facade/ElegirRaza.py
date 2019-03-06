@@ -14,12 +14,14 @@ DICONOS = (200, 200)
 
 class ElegirRaza():
 
+    def __init__(self):
+        self.Jugador1 = Jugador()
+        self.Jugador2 = Jugador()
+
     def pide_raza(self, num_jugador, segundo):
 
         pygame.init()
-
-        Jugador1 = Jugador()
-        Jugador2 = Jugador()
+        crear = True
 
         ventana_raza = pygame.display.set_mode(DIMENSIONES)
         pygame.display.set_caption("Escoger raza de jugadores")
@@ -56,7 +58,7 @@ class ElegirRaza():
         else:
             imagen_fondo = pygame.transform.scale(pygame.image.load("Imagenes/Fondos/FondoRaza2.png"), DIMENSIONES)
 
-        while True:
+        while crear:
 
             ventana_raza.blit(imagen_fondo, (0, 0))
             ventana_raza.blit(LabelElfo, (250, 250))
@@ -78,23 +80,27 @@ class ElegirRaza():
                         if boton['on_click']:
                             if boton['nombre'] == 'SelElfos':
                                 if not segundo:
-                                    Jugador1.setParametros(False, 'Elfos')
-                                    self.pide_raza(2, True)
-                                else:
-                                    Jugador2.setParametros(True, 'Elfos')
+                                    self.Jugador1.setParametros(False, 'Elfos')
+                                    crear = False
+                                elif segundo and num_jugador == 2:
+                                    self.Jugador1.setParametros(True, 'Elfos')
+                                    crear = False
 
                             elif boton['nombre'] == 'SelOrcos':
                                 if not segundo:
-                                    Jugador1.setParametros(False, 'Orcos')
-                                    self.pide_raza(2, True)
+                                    self.Jugador1.setParametros(False, 'Orcos')
+                                    crear = False
                                 else:
-                                    Jugador2.setParametros(True, 'Orcos')
+                                    self.Jugador1.setParametros(True, 'Orcos')
+                                    crear = False
+
                             elif boton['nombre'] == 'SelGuerreros':
                                 if not segundo:
-                                    Jugador1.setParametros(False, 'Guerreros')
-                                    self.pide_raza(2, True)
+                                    self.Jugador1.setParametros(False, 'Guerreros')
+                                    crear = False
                                 else:
-                                    Jugador2.setParametros(True, 'Guerreros')
+                                    self.Jugador1.setParametros(True, 'Guerreros')
+                                    crear = False
 
                             else:
                                 print "ERROR GRAVÍSIMO IMPERDONABLE"
@@ -104,3 +110,7 @@ class ElegirRaza():
                     boton['on_click'] = False
 
             pygame.display.flip()
+
+    def getJugadores(self):
+
+        return self.Jugador1

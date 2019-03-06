@@ -11,11 +11,7 @@ DICONOS = (200, 200)
 
 class PantallaJuego():
 
-    def __init__(self):
-        self.Jugador1 = Jugador()
-        self.Jugador2 = Jugador()
-
-    def setJugadores(self, Jug1, Jug2):
+    def __init__(self, Jug1, Jug2):
         self.Jugador1 = Jug1
         self.Jugador2 = Jug2
 
