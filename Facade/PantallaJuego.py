@@ -66,6 +66,23 @@ class PantallaJuego():
 
 
                     # pygame.time.delay(40)
+        
+            if len(Jugador1.Ejercito)>0 and len(Jugador2.Ejercito)>0:
+                if Jugador1.rectE[len(Jugador1.Ejercito)-1].pygame.Rect.colliderect(Jugador2.rectE[len(Jugador2.Ejercito)-1]):
+                    Jugador1.Ejercito[len(Jugador1.Ejercito)-1].setenBatalla(True)
+                    for i in range(0,len(Jugador1.Ejercito)-1):
+                        Jugador1.Ejercito[i].setenEspera(True)
+                    Jugador2.Ejercito[len(Jugador2.Ejercito)-1].setenBatalla(True)
+                    for i in range(0,len(Jugador2.Ejercito)-1):
+                        Jugador2.Ejercito[i].setenEspera(True)
+                else:
+                    Jugador1.Ejercito[len(Jugador1.Ejercito)-1].setenBatalla(False)
+                    for i in range(0,len(Jugador1.Ejercito)-1):
+                        Jugador1.Ejercito[i].setenEspera(False)
+                    Jugador2.Ejercito[len(Jugador2.Ejercito)-1].setenBatalla(False)
+                    for i in range(0,len(Jugador2.Ejercito)-1):
+                        Jugador2.Ejercito[i].setenEspera(False)
+
 
             PaisajeJug1.dibujar(ventana)
             Jugador1.dibujar(ventana)

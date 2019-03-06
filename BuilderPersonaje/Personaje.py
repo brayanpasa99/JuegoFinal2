@@ -2,18 +2,32 @@ import copy
 
 
 class Personaje:
-
+    
+    velocidad=5
     Poder= 50
     Vida= 150
     enBatalla=False
-
+    enEspera=False
+    
     def __init__(self):
         self.atacar  = []
         self.caminar  = []
         self.morir    = []
     
+    def getVelocidad(self):
+        if self.enBatalla or self.enEspera:
+            return 0
+        else:
+            return 5
+    
+    def reducirVida(self,ataque):
+        self.Vida=self.Vida-ataque
+
     def setenBatalla(self,estado):
         self.enBatalla = estado
+
+    def setenEspera(self,estado):
+        self.enEspera = estado
 
     def setSAtacar(self, atacar):
         self.atacar = atacar
@@ -27,6 +41,8 @@ class Personaje:
     def getSprites(self):
         if self.enBatalla:
             return self.atacar
+        elif self.enEspera:
+            return self.caminar[0]
         else:
             return self.caminar
     def setRectSprites(self, pos):
