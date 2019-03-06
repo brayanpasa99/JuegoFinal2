@@ -8,8 +8,8 @@ class DirectorPersonaje:
     def setBuilder(self, builder):
         self.__builder = builder
 
-    def getPersonaje(self):
-        personaje = Personaje()
+    def getPersonaje(self,tipo):
+        personaje = Personaje(tipo)
 
         SpritesAtacar = self.__builder.getSAtacar()
         personaje.setSAtacar(SpritesAtacar)

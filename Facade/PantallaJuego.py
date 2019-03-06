@@ -67,27 +67,34 @@ class PantallaJuego():
 
         
             if len(Jugador1.Ejercito)>0 and len(Jugador2.Ejercito)>0:
-                print(len(Jugador1.Ejercito))
-                print(len(Jugador2.Ejercito))
-                if pygame.sprite.collide_rect(Jugador1.rectE[0],Jugador2.rectE[0]):
-                    Jugador1.Ejercito[len(Jugador1.Ejercito)-1].setenBatalla(True)    
-                    Jugador2.Ejercito[len(Jugador2.Ejercito)-1].setenBatalla(True)
+                if Jugador1.rectE[0].colliderect(Jugador2.rectE[0]):
+                    Jugador1.Ejercito[0].setenBatalla(True)    
+                    Jugador2.Ejercito[0].setenBatalla(True)
                         
-                if Jugador1.Ejercito[0].getenBatalla() and Jugador2.Ejercito[0].getenBatalla():
-                    print(Jugador1.Ejercito[0].getVida)
-                    print(Jugador2.Ejercito[0].getVida)
+                    if Jugador1.Ejercito[0].getenBatalla() and Jugador2.Ejercito[0].getenBatalla():
+                        Jugador1.Ejercito[0].reducirVida(Jugador2.Ejercito[0].getPoder())
+                        Jugador2.Ejercito[0].reducirVida(Jugador1.Ejercito[0].getPoder())
+                        pygame.time.delay(100)
+                        if Jugador1.Ejercito[0].getVida() <= 0:
+                            Jugador1.Ejercito.pop(0)
+                            Jugador2.Ejercito[0].setenBatalla(False)
+                        elif Jugador2.Ejercito[0].getVida() <= 0:
+                            Jugador2.Ejercito.pop(0)
+                            Jugador1.Ejercito[0].setenBatalla(False)
 
-                    Jugador1.Ejercito[0].reducirVida(Jugador2.Ejercito[0].getPoder())
-                    Jugador2.Ejercito[0].reducirVida(Jugador1.Ejercito[0].getPoder())
-                    pygame.time.delay(100)
-                    if Jugador1.Ejercito[0].getVida() <= 0:
+            if len(Jugador1.Ejercito)>=2:
+                for i in range(1, len(Jugador1.Ejercito)):
+                    if Jugador1.rectE[i].colliderect(Jugador1.rectE[i-1]):
+                        Jugador1.Ejercito[i].setenEspera(True)
+                    #else:
+                        #Jugador1.Ejercito[i].setenEspera(False)
 
-                        Jugador1.Ejercito.pop(0)
-                        Jugador2.Ejercito[0].setenbatalla(False)
-                    elif Jugador2.Ejercito[0].getVida() <= 0:
-                        
-                        Jugador2.Ejercito.pop(0)
-                        Jugador1.Ejercito[0].setenbatalla(False)
+            if len(Jugador2.Ejercito)>=2:
+                for i in range(1, len(Jugador2.Ejercito)):
+                    if Jugador2.rectE[i].colliderect(Jugador2.rectE[i-1]):
+                        Jugador2.Ejercito[i].setenEspera(True)
+                    #else:
+                        #Jugador2.Ejercito[i].setenEspera(False)    
             
             PaisajeJug1.dibujar(ventana)
             Jugador1.dibujar(ventana)
