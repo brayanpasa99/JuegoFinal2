@@ -27,8 +27,8 @@ class Personaje:
     def getSCaminar(self):
         return  self.__caminar
 
-    def clone(self):
-        return copy.deepcopy(self)
+    def clone(self, copiar):
+        return copy.deepcopy(copiar)
    
     #def getSprites(self):
         #return [self.__atacar, self.__morir, self.__caminar]

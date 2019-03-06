@@ -1,3 +1,5 @@
+import copy
+
 import pygame
 
 from BuilderPersonaje.DirectorPersonaje import DirectorPersonaje
@@ -80,7 +82,8 @@ class Jugador():
             self.luchadores = luchadores
 
     def CrearPersonaje(self,id):
-        self.Ejercito.append(self.luchadores[id].clone())
+        self.Ejercito.append(copy.deepcopy(self.luchadores[id]))
+        #self.Ejercito.append(self.luchadores[id].clone(self.luchadores[id]))
         print("se crea un personaje ")
         print(len(self.Ejercito))
 

@@ -66,6 +66,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                pygame.display.update()
                 break
 
             elif event.type == pygame.KEYDOWN:
@@ -78,8 +79,9 @@ def main():
         Jugador1.dibujar(ventana)
         Jugador1.update()
 
+        pygame.display.update()
         pygame.display.flip()
-        #reloj.tick(60)
+        reloj.tick(60)
 
 if __name__ == "__main__":
     main()
