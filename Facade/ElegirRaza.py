@@ -88,18 +88,18 @@ class ElegirRaza():
 
                             elif boton['nombre'] == 'SelOrcos':
                                 if not segundo:
-                                    self.Jugador1.setParametros(False, 'Orcos')
+                                    return 'Orcos'
                                     crear = False
                                 else:
-                                    self.Jugador1.setParametros(True, 'Orcos')
+                                    return 'Orcos'
                                     crear = False
 
                             elif boton['nombre'] == 'SelGuerreros':
                                 if not segundo:
-                                    self.Jugador1.setParametros(False, 'Guerreros')
+                                    return 'Guerreros'
                                     crear = False
                                 else:
-                                    self.Jugador1.setParametros(True, 'Guerreros')
+                                    return 'Guerreros'
                                     crear = False
 
                             else:
