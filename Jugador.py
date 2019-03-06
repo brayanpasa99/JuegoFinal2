@@ -70,11 +70,8 @@ class Jugador():
                 ventana.blit(Char.getSCaminar()[j].image,Char.getSCaminar()[j].rect)
                 pygame.display.update(Char.getSCaminar()[j].rect)
                 reloj = pygame.time.Clock()
-                reloj.tick(20)
-            
+                reloj.tick(27)
 
-
-        
 
              
         """ if True:

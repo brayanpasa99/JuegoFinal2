@@ -76,8 +76,8 @@ def main():
         Jugador1.dibujar(ventana)
         Jugador1.update()
 
-        pygame.display.flip()
-        # reloj.tick(20)
+        pygame.display.update()
+        #reloj.tick(27)
 
 if __name__ == "__main__":
     main()
