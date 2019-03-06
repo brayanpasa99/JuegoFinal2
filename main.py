@@ -2,7 +2,7 @@ import sys
 import pygame
 from pygame.locals import *
 
-from Jugador import Jugador
+from Jugador import *
 
 DIMENSIONES = (1000, 500)
 
@@ -14,35 +14,36 @@ def main():
 
     raza = input("Seleccione la raza del jugador 1: ")
 
-    Jugador1 = Jugador()
-    Jugador2 = Jugador()
+    Jugador1 = JugadorIzq()
+    Jugador2 = JugadorDer()
+
     if raza == 1:
 
-        Jugador1.setParametros(False, 'Elfos')
+        Jugador1.setParametros('Elfos')
         
 
     elif raza == 2:
-        Jugador1.setParametros(False, 'Orcos')
+        Jugador1.setParametros('Orcos')
 
         
 
     elif raza == 3:
-        Jugador1.setParametros(False, 'Guerreros')
+        Jugador1.setParametros('Guerreros')
        
 
     raza = input("Seleccione la raza del jugador 2: ")
 
     if raza == 1:
 
-        Jugador2.setParametros(True, 'Elfos')
+        Jugador2.setParametros('Elfos')
         
 
     elif raza == 2:
-        Jugador2.setParametros(True, 'Orcos')
+        Jugador2.setParametros('Orcos')
         
 
     elif raza == 3:
-        Jugador2.setParametros(True, 'Guerreros')
+        Jugador2.setParametros('Guerreros')
         
 
     pygame.init()
@@ -71,10 +72,15 @@ def main():
                     Jugador1.crearPersonaje(2)
                 if event.key == K_3:
                     Jugador1.crearPersonaje(3)
-
-                # pygame.time.delay(40)
-
+                if event.key == K_j:
+                    Jugador2.crearPersonaje(1)
+                if event.key == K_k:
+                    Jugador2.crearPersonaje(2)
+                if event.key == K_l:
+                    Jugador2.crearPersonaje(3)
+                
         Jugador1.dibujar(ventana)
+        Jugador2.dibujar(ventana)
         pygame.display.flip()
         # reloj.tick(20)
 
