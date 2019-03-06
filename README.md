@@ -25,4 +25,6 @@ El patrón Facade provee una interfaz unificada para un conjunto de interfaces e
 
 ![Estructura](https://github.com/brayanpasa99/JuegoFinal2/blob/master/Diagrama%20juego.png)
 
+## Imagenes del juego
 
+![Estructura](https://github.com/brayanpasa99/JuegoFinal2/blob/master/Diagrama%20juego.png)
