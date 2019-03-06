@@ -1,14 +1,78 @@
-import sys
-import pygame
-from pygame.locals import *
+from Facade.Fachada import Fachada
 
+<<<<<<< HEAD
 from Jugador import *
-
-DIMENSIONES = (1000, 500)
-
+=======
+>>>>>>> d722cf26e248662a2d0f111c7690e9b4557e8861
 
 def main():
-    print "1. Elfos"
+
+    fachada = Fachada()
+    fachada.operacion()
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''print "1. Elfos"
     print "2. Orcos"
     print "3. Guerreros"
 
@@ -82,7 +146,4 @@ def main():
         Jugador1.dibujar(ventana)
         Jugador2.dibujar(ventana)
         pygame.display.flip()
-        # reloj.tick(20)
-
-if __name__ == "__main__":
-    main()
+        # reloj.tick(20)'''
