@@ -21,7 +21,7 @@ class PantallaPrincipal():
 
         image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/FondoPrincipal.png'), DIMENSIONES)
 
-        FuenteTitulo = pygame.font.SysFont("Arial", 60)
+        FuenteTitulo = pygame.font.SysFont("Chiller", 80)
         LabelTitulo = FuenteTitulo.render("Juanito y Los Argonautas", 0, COLOR_TEXTO)
 
         #Botón de jugar
