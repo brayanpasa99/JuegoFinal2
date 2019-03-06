@@ -3,6 +3,7 @@ import sys
 import pygame
 from pygame.locals import *
 
+from BuilderEscenario.DirectorEscenario import DirectorEscenario
 from Jugador import Jugador
 
 DIMENSIONES = (1100, 600)
@@ -17,6 +18,7 @@ class PantallaJuego():
         Jugador2 = Jugador()
         Jugador1.setParametros(False, Raza1)
         Jugador2.setParametros(True, Raza2)
+
         pygame.init()
 
         ventana = pygame.display.set_mode(DIMENSIONES)
