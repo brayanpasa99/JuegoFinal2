@@ -55,6 +55,7 @@ class JugadorIzq():
             director.setBuilder(self.build3)
       
         self.Ejercito.append(director.getPersonaje())
+        self.Ejercito[len(self.Ejercito)-1].setRectSprites((100,375))
         self.rectE.append(self.Ejercito[len(self.Ejercito)-1].getSprites()[0])
         
 
@@ -71,7 +72,7 @@ class JugadorIzq():
                     Char.getSprites()[j].rect.y=375
                     ventana.blit(Char.getSprites()[j].image,Char.getSprites()[j].rect)                
                     pygame.display.update(Char.getSprites()[j].rect)
-                reloj.tick(60)
+                    reloj.tick(60)
                 
 class JugadorDer():
 
@@ -135,7 +136,7 @@ class JugadorDer():
                     aux=pygame.transform.flip(Char.getSprites()[j].image,True,False)
                     ventana.blit(aux,Char.getSprites()[j].rect)                
                     pygame.display.update(Char.getSprites()[j].rect)
-                reloj.tick(60)
+                    reloj.tick(60)
 
 
 

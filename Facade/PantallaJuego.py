@@ -47,7 +47,7 @@ class PantallaJuego():
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    pygame.quit()
+
                     sys.exit()
 
                 elif event.type == pygame.KEYDOWN:
@@ -65,25 +65,30 @@ class PantallaJuego():
                         Jugador2.crearPersonaje(3)
 
 
-                    # pygame.time.delay(40)
         
             if len(Jugador1.Ejercito)>0 and len(Jugador2.Ejercito)>0:
+                print(len(Jugador1.Ejercito))
+                print(len(Jugador2.Ejercito))
                 if pygame.sprite.collide_rect(Jugador1.rectE[0],Jugador2.rectE[0]):
-                    Jugador1.Ejercito[len(Jugador1.Ejercito)-1].setenBatalla(True)
-                    for i in range(0,len(Jugador1.Ejercito)-1):
-                        Jugador1.Ejercito[i].setenEspera(True)
+                    Jugador1.Ejercito[len(Jugador1.Ejercito)-1].setenBatalla(True)    
                     Jugador2.Ejercito[len(Jugador2.Ejercito)-1].setenBatalla(True)
-                    for i in range(0,len(Jugador2.Ejercito)-1):
-                        Jugador2.Ejercito[i].setenEspera(True)
-                else:
-                    Jugador1.Ejercito[len(Jugador1.Ejercito)-1].setenBatalla(False)
-                    for i in range(0,len(Jugador1.Ejercito)-1):
-                        Jugador1.Ejercito[i].setenEspera(False)
-                    Jugador2.Ejercito[len(Jugador2.Ejercito)-1].setenBatalla(False)
-                    for i in range(0,len(Jugador2.Ejercito)-1):
-                        Jugador2.Ejercito[i].setenEspera(False)
+                        
+                if Jugador1.Ejercito[0].getenBatalla() and Jugador2.Ejercito[0].getenBatalla():
+                    print(Jugador1.Ejercito[0].getVida)
+                    print(Jugador2.Ejercito[0].getVida)
 
+                    Jugador1.Ejercito[0].reducirVida(Jugador2.Ejercito[0].getPoder())
+                    Jugador2.Ejercito[0].reducirVida(Jugador1.Ejercito[0].getPoder())
+                    pygame.time.delay(100)
+                    if Jugador1.Ejercito[0].getVida() <= 0:
 
+                        Jugador1.Ejercito.pop(0)
+                        Jugador2.Ejercito[0].setenbatalla(False)
+                    elif Jugador2.Ejercito[0].getVida() <= 0:
+                        
+                        Jugador2.Ejercito.pop(0)
+                        Jugador1.Ejercito[0].setenbatalla(False)
+            
             PaisajeJug1.dibujar(ventana)
             Jugador1.dibujar(ventana)
             PaisajeJug2.dibujar(ventana)

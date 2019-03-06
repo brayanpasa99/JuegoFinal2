@@ -13,6 +13,15 @@ class Personaje:
         self.atacar  = []
         self.caminar  = []
         self.morir    = []
+
+    def getenBatalla(self):
+        return self.enBatalla
+
+    def getVida(self):
+        return self.Vida
+
+    def getPoder(self):
+        return self.Poder
     
     def getVelocidad(self):
         if self.enBatalla or self.enEspera:
@@ -42,7 +51,7 @@ class Personaje:
         if self.enBatalla:
             return self.atacar
         elif self.enEspera:
-            return self.caminar[0]
+            return self.caminar
         else:
             return self.caminar
     def setRectSprites(self, pos):
