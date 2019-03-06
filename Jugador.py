@@ -1,3 +1,5 @@
+import pygame
+
 from BuilderPersonaje.DirectorPersonaje import DirectorPersonaje
 from BuilderPersonaje.ElfoPer1 import ElfoPer1
 from BuilderPersonaje.ElfoPer2 import ElfoPer2
@@ -15,6 +17,7 @@ class Jugador():
     def __init__(self):
         __segundo = False
         __raza = ''
+        __luchadores = []
 
     def setParametros(self, segundo, raza):
         self.__segundo = segundo
@@ -39,7 +42,7 @@ class Jugador():
             director.setBuilder(Elfo3)
             luchadores.append(director.getPersonaje().getSprites())
 
-            return luchadores
+            self.__luchadores = luchadores
 
         if self.__raza == 'Orcos':
             Orco1 = OrcoPer1()
@@ -55,7 +58,7 @@ class Jugador():
             director.setBuilder(Orco3)
             luchadores.append(director.getPersonaje().getSprites())
 
-            return luchadores
+            self.__luchadores = luchadores
 
         if self.__raza == 'Guerreros':
             Guerrero1 = GuerreroPer1()
@@ -71,4 +74,17 @@ class Jugador():
             director.setBuilder(Guerrero3)
             luchadores.append(director.getPersonaje().getSprites())
 
-            return luchadores
+            self.__luchadores = luchadores
+
+    def dibujar(self, ventana, atacando, caminando, muriendo):
+        if atacando == True:
+            for i in range(0, len(self.__luchadores[0][1])):
+                self.__luchadores[0][1][i].rect.left = self.__luchadores[0][1][i].rect.left + 20
+                self.__luchadores[0][1][i].rect.top = self.__luchadores[0][1][i].rect.top + 20
+                ventana.blit(self.__luchadores[0][1][i].image, self.__luchadores[0][1][i].rect)
+                pygame.display.flip()
+                reloj = pygame.time.Clock()
+                reloj.tick(60)
+
+    def update(self):
+        pass
