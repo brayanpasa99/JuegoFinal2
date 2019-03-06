@@ -74,14 +74,9 @@ def main():
 
                 # pygame.time.delay(40)
 
-<<<<<<< HEAD
         Jugador1.dibujar(ventana)
         pygame.display.flip()
         # reloj.tick(20)
-=======
-        pygame.display.update()
-        #reloj.tick(27)
->>>>>>> dab1b889666cce5795f2b054184983726952c100
 
 if __name__ == "__main__":
     main()

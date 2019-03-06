@@ -62,30 +62,12 @@ class Jugador():
         reloj = pygame.time.Clock()
         for i in range(0, len(self.Ejercito)):
             Char=self.Ejercito[i]
-<<<<<<< HEAD
             for j in range(0,len(Char.getSprites())):
                 Char.getSprites()[j].rect.x=Char.getSprites()[j].rect.x + 5
                 Char.getSprites()[j].rect.y=375
                 ventana.blit(Char.getSprites()[j].image,Char.getSprites()[j].rect)                
                 pygame.display.update(Char.getSprites()[j].rect)
-                reloj.tick(80)
-=======
-            for j in range(0,len(Char.getSCaminar())):
-                Char.getSCaminar()[j].rect.x=Char.getSCaminar()[j].rect.x + 5
-                Char.getSCaminar()[j].rect.y=Char.getSCaminar()[j].rect.y
-                ventana.blit(Char.getSCaminar()[j].image,Char.getSCaminar()[j].rect)
-                pygame.display.update(Char.getSCaminar()[j].rect)
-                reloj = pygame.time.Clock()
-                reloj.tick(27)
-
-
-             
-        """ if True:
-            for i in range(0, len(self.__luchadores[0].getSCaminar())):
-                self.__luchadores[0].getSCaminar()[i].rect.x = self.__luchadores[0].getSCaminar()[i].rect.x+ 5
-                self.__luchadores[0].getSCaminar()[i].rect.y = self.__luchadores[0].getSCaminar()[i].rect.y
-                ventana.blit(self.__luchadores[0].getSCaminar()[i].image, self.__luchadores[0].getSCaminar()[i].rect)
->>>>>>> dab1b889666cce5795f2b054184983726952c100
+                reloj.tick(60)
                 
 
 
