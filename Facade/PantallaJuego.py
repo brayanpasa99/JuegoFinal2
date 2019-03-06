@@ -1,3 +1,4 @@
+import random
 import sys
 
 import pygame
@@ -9,6 +10,7 @@ from Paisaje import Paisaje
 DIMENSIONES = (1100, 600)
 COLOR_TEXTO = (243, 255, 0)
 DICONOS = (200, 200)
+FONDOS = ['Fondo1.png', 'Fondo2.png', 'Fondo3.jpg', 'Fondo4.jpg', 'Fondo5.png']
 
 class PantallaJuego():
 
@@ -33,7 +35,7 @@ class PantallaJuego():
         ventana = pygame.display.set_mode(DIMENSIONES)
         pygame.display.set_caption("Campo de Batalla")
 
-        image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/Fondo4.jpg'), DIMENSIONES)
+        image_Fondo = pygame.transform.scale(pygame.image.load('Imagenes/Fondos/'+FONDOS[random.randrange(5)]), DIMENSIONES)
 
         reloj = pygame.time.Clock()
 
