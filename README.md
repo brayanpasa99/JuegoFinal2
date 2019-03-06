@@ -1,4 +1,4 @@
-#Juanito y los argonautas
+##Juanito y los argonautas
 
 ## Nombre:
 
@@ -27,4 +27,4 @@ El patrón Facade provee una interfaz unificada para un conjunto de interfaces e
 
 ## Imagenes del juego
 
-![Estructura](https://github.com/brayanpasa99/JuegoFinal2/blob/master/Diagrama%20juego.png)
+![Estructura](https://github.com/brayanpasa99/JuegoFinal2/blob/master/imagen.png)
