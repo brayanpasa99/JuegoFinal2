@@ -17,6 +17,7 @@ class PantallaJuego():
         Jugador2 = JugadorDer()
         Jugador1.setParametros( Raza1)
         Jugador2.setParametros( Raza2)
+        
         pygame.init()
 
         ventana = pygame.display.set_mode(DIMENSIONES)
