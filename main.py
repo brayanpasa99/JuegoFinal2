@@ -1,11 +1,4 @@
-import sys
-import pygame
-from pygame.locals import *
-
 from Facade.Fachada import Fachada
-from Jugador import Jugador
-
-DIMENSIONES = (1000, 500)
 
 
 def main():

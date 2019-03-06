@@ -20,8 +20,8 @@ class Jugador():
     build3=None
 
     def __init__(self):
-        segundo = False
-        raza = ''
+        self.segundo = False
+        self.raza = ''
         
         
 
